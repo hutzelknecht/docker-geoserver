@@ -1,3 +1,4 @@
+data/*
 resources/*
 !resources/plugins/
 resources/plugins/*
