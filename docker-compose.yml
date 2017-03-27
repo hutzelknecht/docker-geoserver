@@ -1,8 +1,10 @@
-db:
-  image: kartoza/postgis:9.4-2.1
-  environment:
-    - USERNAME=docker
-    - PASS=docker
+#db:
+#  image: kartoza/postgis:9.4-2.1
+#  environment:
+#    - USERNAME=docker
+#    - PASS=docker
+#  ports:
+#    - "5433:5432"
   
 geoserver:
   #image: kartoza/geoserver
@@ -12,10 +14,10 @@ geoserver:
     # Wherever you want to mount your data from
     - ./data:/opt/geoserver/data_dir
     - ./setenv.sh:/usr/local/tomcat/bin/setenv.sh
-  links:
-    - db:db
+#  links:
+#    - db:db
   ports:
     - "8080:8080"
-  environment:
-    - USERNAME docker
-    - PASS docker
+#  environment:
+#    - USERNAME docker
+#    - PASS docker
